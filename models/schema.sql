@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-DROP DATABASE IF EXISTS gamedb;
-CREATE DATABASE gamedb;
-=======
 DROP DATABASE IF EXISTS game_db;
 CREATE DATABASE game_db;
 
@@ -11,7 +7,6 @@ CREATE TABLE players
 	name varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
->>>>>>> aa0f46d237bf61d526b2f99de6e19bed7422acf6
 
 DROP DATABASE IF EXISTS testdb;
 CREATE DATABASE testdb;
