@@ -1,9 +1,9 @@
 //load bcrypt
-const bCrypt = require('bcrypt-nodejs');
+const bCrypt = require("bcrypt-nodejs");
 
 module.exports = (passport, user) => {
   const User = user;
-  const LocalStrategy = require('passport-local').Strategy;
+  const LocalStrategy = require("passport-local").Strategy;
 
   passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -21,11 +21,11 @@ module.exports = (passport, user) => {
   });
 
   passport.use(
-    'local-signup',
+    "local-signup",
     new LocalStrategy(
       {
-        usernameField: 'email',
-        passwordField: 'password',
+        usernameField: "email",
+        passwordField: "password",
         passReqToCallback: true // allows us to pass back the entire request to the callback
       },
 
@@ -37,7 +37,7 @@ module.exports = (passport, user) => {
         User.findOne({ where: { email: email } }).then(user => {
           if (user) {
             return done(null, false, {
-              message: 'That email is already taken'
+              message: "That email is already taken"
             });
           } else {
             var userPassword = generateHash(password);
@@ -65,12 +65,12 @@ module.exports = (passport, user) => {
 
   //LOCAL SIGNIN
   passport.use(
-    'local-signin',
+    "local-signin",
     new LocalStrategy(
       {
         // by default, local strategy uses username and password, we will override with email
-        usernameField: 'email',
-        passwordField: 'password',
+        usernameField: "email",
+        passwordField: "password",
         passReqToCallback: true // allows us to pass back the entire request to the callback
       },
 
@@ -84,11 +84,11 @@ module.exports = (passport, user) => {
         User.findOne({ where: { email: email } })
           .then(user => {
             if (!user) {
-              return done(null, false, { message: 'Email does not exist' });
+              return done(null, false, { message: "Email does not exist" });
             }
 
             if (!isValidPassword(user.password, password)) {
-              return done(null, false, { message: 'Incorrect password.' });
+              return done(null, false, { message: "Incorrect password." });
             }
 
             var userinfo = user.get();
@@ -96,10 +96,10 @@ module.exports = (passport, user) => {
             return done(null, userinfo);
           })
           .catch(err => {
-            console.log('Error:', err);
+            console.log("Error:", err);
 
             return done(null, false, {
-              message: 'Something went wrong with your Signin'
+              message: "Something went wrong with your Signin"
             });
           });
       }
