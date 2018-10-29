@@ -165,7 +165,6 @@ function update() {
     const userData = {
       score: score
     };
-  
     $.ajax({
       type: "POST",
       url: "/api/game",
