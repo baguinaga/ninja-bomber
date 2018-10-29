@@ -41,6 +41,11 @@ module.exports = (app, passport) => {
     })
   );
 
+  app.post("/api/game", isLoggedIn, function(req, res) {
+    console.log(req.body);
+    console.log(req.session.passport.user);
+  });
+
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();
@@ -48,4 +53,8 @@ module.exports = (app, passport) => {
 
     res.redirect("/signin");
   }
+
+  app.get("/game", function(req, res) {
+    res.render("game");
+  });
 };

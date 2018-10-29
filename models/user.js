@@ -14,5 +14,11 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
+  // User.associate = function(models) {
+  //   user.hasMany(models.Post, {
+  //     onDelete: "cascade"
+  //   });
+  // };
+
   return User;
 };
