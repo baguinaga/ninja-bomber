@@ -1,5 +1,5 @@
 {
-  "name": "Project-2",
+  "name": "project-2",
   "version": "1.0.0",
   "description": "",
   "main": "passport.js",
@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
+    "lint": "./node_modules/.bin/eslint **/*.js --quiet; exit 0",
     "start": "node server.js"
   },
   "repository": {
@@ -30,8 +31,17 @@
     "express-session": "^1.15.6",
     "mysql2": "^1.6.1",
     "passport": "^0.4.0",
+    "passport-google-auth": "^1.0.2",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.41.0",
-    "sequelize-cli": "^5.2.0"
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.7"
   }
 }
