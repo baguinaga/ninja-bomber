@@ -7,6 +7,3 @@ CREATE TABLE players
 	name varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
-
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
