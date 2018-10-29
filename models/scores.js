@@ -5,12 +5,12 @@ module.exports = (sequelize, Sequelize) => {
   });
 
   Scores.associate = function(models) {
-    Scores.belongsTo(models.User, {
+    Scores.belongsTo(models.user, {
       foreignKey: {
         allowNull: false
       }
     })
-    Scores.belongsTo(models.Games, {
+    Scores.belongsTo(models.games, {
       foreignKey: {
         allowNull: false
       }
