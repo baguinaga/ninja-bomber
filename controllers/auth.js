@@ -48,4 +48,8 @@ module.exports = (app, passport) => {
 
     res.redirect("/signin");
   }
+
+  app.get("/game", function(req, res) {
+    res.render("game");
+  });
 };

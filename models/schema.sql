@@ -7,11 +7,3 @@ CREATE TABLE players
 	name varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
-
-CREATE TABLE scores
-(
-	id in NOT NULL AUTO_INCREMENT,
-	name VARCHAR(255) NOT NULL,
-	score INT(10) NOT NULL,
-	PRIMARY KEY (id)
-);
