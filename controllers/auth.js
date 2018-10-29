@@ -25,6 +25,10 @@ module.exports = (app, passport) => {
 
   app.get("/logout", (req, res) => {
     req.session.destroy(err => {
+      if (err) {
+        console.log(err);
+        return res.status(500).end();
+      }
       res.redirect("/");
     });
   });
