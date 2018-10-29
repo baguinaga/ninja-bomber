@@ -23,6 +23,10 @@ module.exports = (app, passport) => {
     res.render("home");
   });
 
+  app.get("/game", function(req, res) {
+    res.render("game");
+  });
+
   app.get("/logout", (req, res) => {
     req.session.destroy(err => {
       if (err) {
