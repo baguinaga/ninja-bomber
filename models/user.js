@@ -15,7 +15,7 @@ module.exports = (sequelize, Sequelize) => {
   });
 
   User.associate = function(models) {
-    User.hasMany(models.scores);
+    User.hasMany(models.Scores);
   };
 
   return User;

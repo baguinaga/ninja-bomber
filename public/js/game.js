@@ -139,16 +139,6 @@ function create() {
   this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
 
-<<<<<<< HEAD
-function update ()
-{
-  if (gameOver)
-  {
-      console.log("over");
-      return;
-      
-      
-=======
 function restart() {
   $(window).on("click", function() {
     window.location.reload(true);
@@ -172,7 +162,6 @@ function update() {
         return restart();
       });
     }
->>>>>>> d2b8f0a36689be0a18ac25f114647c186b890f48
   }
 
   if (cursors.left.isDown) {

@@ -51,15 +51,4 @@ module.exports = (app, passport) => {
     }
     res.redirect("/signin");
   }
-<<<<<<< HEAD
-
-  app.get("/game", function(req, res) {
-    res.render("game");
-  });
-
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
-=======
->>>>>>> d2b8f0a36689be0a18ac25f114647c186b890f48
 };

@@ -16,13 +16,8 @@ module.exports = (sequelize, Sequelize) => {
       foreignKey: {
         allowNull: false
       }
-<<<<<<< HEAD
-    })
-    Scores.belongsTo(models.games, {
-=======
     });
     Scores.belongsTo(models.Games, {
->>>>>>> d2b8f0a36689be0a18ac25f114647c186b890f48
       foreignKey: {
         allowNull: false
       }

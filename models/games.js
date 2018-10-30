@@ -5,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
   });
 
   Games.associate = function(models) {
-    Games.hasMany(models.scores, {
+    Games.hasMany(models.Scores, {
       onDelete: "cascade"
     });
   };
