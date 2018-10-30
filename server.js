@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const env = require("dotenv").load();
 const exphbs = require("express-handlebars");
 const router = express.Router();
+const flash = require("connect-flash");
 
 // BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,6 +23,7 @@ app.use(
 ); // session secret
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 // Handlebars
 const viewsPath = path.join(__dirname, "views");
@@ -47,6 +49,7 @@ app.use(express.static("public"));
 
 // Routes
 const authRoute = require("./controllers/auth.js")(app, passport);
+//const gameRoute = require("./controllers/gameController.js")(app, passport);
 
 // Load passport strategies
 require("./passport.js")(passport, models.user);
