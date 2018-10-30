@@ -52,4 +52,8 @@ module.exports = (app, passport) => {
   app.get("/game", function(req, res) {
     res.render("game");
   });
+
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 };

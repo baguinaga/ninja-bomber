@@ -120,6 +120,7 @@ function update ()
 {
   if (gameOver)
   {
+      console.log("over");
       return;
       
       
