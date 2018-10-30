@@ -57,7 +57,7 @@ require("./routes/htmlRoutes")(app);
 
 // Sync Database
 models.sequelize
-  .sync()
+  .sync({ force: true })
   .then(function() {
     console.log("Database Connected");
 

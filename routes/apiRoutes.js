@@ -26,7 +26,7 @@ module.exports = function(app) {
   app.post("/api/game", isLoggedIn, function(req, res) {
     const userData = {
       userId: req.session.passport.user,
-      gameId: req.body.gameId,
+      GameId: req.body.gameId,
       score: req.body.score
     };
     console.log(userData);

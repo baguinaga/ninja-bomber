@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  var Scores = sequelize.define("scores", {
+  var Scores = sequelize.define("Scores", {
     id: {
       autoIncrement: true,
       primaryKey: true,
@@ -17,7 +17,7 @@ module.exports = (sequelize, Sequelize) => {
         allowNull: false
       }
     });
-    Scores.belongsTo(models.games, {
+    Scores.belongsTo(models.Games, {
       foreignKey: {
         allowNull: false
       }
