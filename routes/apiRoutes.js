@@ -24,14 +24,15 @@ module.exports = function(app) {
 
   //Post user highscore
   app.post("/api/game", isLoggedIn, function(req, res) {
-    console.log(req.body);
     const userData = {
       userId: req.session.passport.user,
       gameId: req.body.gameId,
       score: req.body.score
     };
     console.log(userData);
-    res.json(userData);
+    db.Scores.create(userData).then(function(response) {
+      res.json(response);
+    });
   });
 
   function isLoggedIn(req, res, next) {

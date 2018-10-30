@@ -41,13 +41,9 @@ module.exports = (app, passport) => {
     })
   );
 
-  // app.post("/api/game", isLoggedIn, function(req, res) {
-  //   const userData = {
-  //     score: req.body,
-  //     userID: req.session.passport.user
-  //   };
-  //   console.log(userData);
-  // });
+  app.get("/game", function(req, res) {
+    res.render("game");
+  });
 
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
@@ -55,8 +51,4 @@ module.exports = (app, passport) => {
     }
     res.redirect("/signin");
   }
-
-  app.get("/game", function(req, res) {
-    res.render("game");
-  });
 };
