@@ -41,16 +41,18 @@ module.exports = (app, passport) => {
     })
   );
 
-  app.post("/api/game", isLoggedIn, function(req, res) {
-    console.log(req.body);
-    console.log(req.session.passport.user);
-  });
+  // app.post("/api/game", isLoggedIn, function(req, res) {
+  //   const userData = {
+  //     score: req.body,
+  //     userID: req.session.passport.user
+  //   };
+  //   console.log(userData);
+  // });
 
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();
     }
-
     res.redirect("/signin");
   }
 

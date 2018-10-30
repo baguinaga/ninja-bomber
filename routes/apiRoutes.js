@@ -21,4 +21,23 @@ module.exports = function(app) {
       res.json(users);
     });
   });
+
+  //Post user highscore
+  app.post("/api/game", isLoggedIn, function(req, res) {
+    console.log(req.body);
+    const userData = {
+      userId: req.session.passport.user,
+      gameId: req.body.gameId,
+      score: req.body.score
+    };
+    console.log(userData);
+    res.json(userData);
+  });
+
+  function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+      return next();
+    }
+    res.redirect("/signin");
+  }
 };

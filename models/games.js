@@ -10,5 +10,5 @@ module.exports = (sequelize, Sequelize) => {
     });
   };
 
-  return Games
-}
+  return Games;
+};

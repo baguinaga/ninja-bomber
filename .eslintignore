@@ -1,5 +1,2 @@
 node_modules
-models/index.js
-models/scores.js
-models/user.js
-models/games.js
+models

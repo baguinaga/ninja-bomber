@@ -82,10 +82,12 @@ function create() {
 
   this.anims.create({
     key: "turn",
-    frames: [{
-      key: "dude",
-      frame: 4
-    }],
+    frames: [
+      {
+        key: "dude",
+        frame: 4
+      }
+    ],
     frameRate: 20
   });
 
@@ -113,7 +115,7 @@ function create() {
     }
   });
 
-  stars.children.iterate(function (child) {
+  stars.children.iterate(function(child) {
     //  Give each star a slightly different bounce
     child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
   });
@@ -137,23 +139,8 @@ function create() {
   this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
 
-// function sendScore() {
-//   const userData = {
-//     score: score
-//   };
-
-//   $.ajax({
-//     type: "POST",
-//     url: "/api/game",
-//     data: userData
-//   }).then(response => {
-//     console.log("sent");
-//     restart();
-//   });
-// }
-
 function restart() {
-  $(window).on("click", function () {
+  $(window).on("click", function() {
     window.location.reload(true);
   });
 }
@@ -161,7 +148,8 @@ function restart() {
 function update() {
   if (gameOver) {
     const userData = {
-      score: score
+      score: score,
+      gameId: 1
     };
     if (sendData) {
       sendData = false;
@@ -170,6 +158,7 @@ function update() {
         url: "/api/game",
         data: userData
       }).then(response => {
+        console.log(response);
         return restart();
       });
     }
@@ -203,14 +192,14 @@ function collectStar(player, star) {
 
   if (stars.countActive(true) === 0) {
     //  A new batch of stars to collect
-    stars.children.iterate(function (child) {
+    stars.children.iterate(function(child) {
       child.enableBody(true, child.x, 0, true, true);
     });
 
     var x =
-      player.x < 400 ?
-      Phaser.Math.Between(400, 800) :
-      Phaser.Math.Between(0, 400);
+      player.x < 400
+        ? Phaser.Math.Between(400, 800)
+        : Phaser.Math.Between(0, 400);
 
     var bomb = bombs.create(x, 16, "bomb");
     bomb.setBounce(1);
