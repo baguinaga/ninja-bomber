@@ -51,7 +51,6 @@ module.exports = (app, passport) => {
     if (req.isAuthenticated()) {
       return next();
     }
-
     res.redirect("/signin");
   }
 };
