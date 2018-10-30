@@ -4,18 +4,19 @@ module.exports = (app, passport) => {
   });
 
   app.get("/signup", (req, res) => {
-    res.render("signup");
+    res.render("signup", { error: req.flash("error") });
   });
 
   app.get("/signin", (req, res) => {
-    res.render("signin");
+    res.render("signin", { error: req.flash("error") });
   });
 
   app.post(
     "/signup",
     passport.authenticate("local-signup", {
       successRedirect: "/home",
-      failureRedirect: "/signup"
+      failureRedirect: "/signup",
+      failureFlash: true
     })
   );
 
@@ -37,11 +38,12 @@ module.exports = (app, passport) => {
     "/signin",
     passport.authenticate("local-signin", {
       successRedirect: "/home",
-      failureRedirect: "/signin"
+      failureRedirect: "/signin",
+      failureFlash: true
     })
   );
 
-  app.get("/game", function(req, res) {
+  app.get("/game", isLoggedIn, function(req, res) {
     res.render("game");
   });
 
