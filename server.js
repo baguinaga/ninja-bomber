@@ -51,9 +51,13 @@ const authRoute = require("./controllers/auth.js")(app, passport);
 // Load passport strategies
 require("./passport.js")(passport, models.user);
 
+//Api/Html routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 // Sync Database
 models.sequelize
-  .sync()
+  .sync({ force: true })
   .then(function() {
     console.log("Database Connected");
 

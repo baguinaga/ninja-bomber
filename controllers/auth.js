@@ -41,13 +41,17 @@ module.exports = (app, passport) => {
     })
   );
 
+  app.get("/game", function(req, res) {
+    res.render("game");
+  });
+
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();
     }
-
     res.redirect("/signin");
   }
+<<<<<<< HEAD
 
   app.get("/game", function(req, res) {
     res.render("game");
@@ -56,4 +60,6 @@ module.exports = (app, passport) => {
   app.get("*", function(req, res) {
     res.render("404");
   });
+=======
+>>>>>>> d2b8f0a36689be0a18ac25f114647c186b890f48
 };

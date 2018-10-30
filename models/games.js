@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-  var Games = sequelize.define("games", {
+  var Games = sequelize.define("Games", {
     id: { autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
     name: { type: Sequelize.STRING, notEmpty: true }
   });
@@ -10,5 +10,5 @@ module.exports = (sequelize, Sequelize) => {
     });
   };
 
-  return Games
-}
+  return Games;
+};
