@@ -30,6 +30,11 @@ module.exports = function(app) {
       score: req.body.score
     };
     console.log(userData);
+    db.Games.findOrCreate({
+      where: {
+        name: "Bomber"
+      }
+    });
     db.Scores.create(userData).then(function(response) {
       res.json(response);
     });
