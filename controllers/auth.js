@@ -47,6 +47,10 @@ module.exports = (app, passport) => {
     res.render("game");
   });
 
+  app.get("/api/game/:id", function(req, res) {
+    res.render("highscores");
+  });
+
   function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
       return next();

@@ -146,6 +146,12 @@ function restart() {
 }
 
 function update() {
+  $(document).keydown(function (e) {
+    if (e.keyCode == 27) {
+      gameOver = true;
+    }
+  });
+
   if (gameOver) {
     const userData = {
       score: score,
