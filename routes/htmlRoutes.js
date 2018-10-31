@@ -22,14 +22,15 @@ module.exports = function(app) {
 
   app.get("/highscores", function(req, res) {
     db.Scores.findAll({
-      include: [db.user]
+      include: [db.user],
+      order: [["score", "DESC"]],
+      limit: 10
     }).then(function(scores) {
-      res.json(scores);
-      // this will be used to render the handlebars highscore page (just parse and use the json)
-      // res.render("highscores", {
-      //   score: scores.score,
-      //   email: scores.user.email
-      // });
+      console.log(scores);
+      scores.forEach((score, i) => {
+        score.rank = i + 1;
+      });
+      res.render("highscores", { score: scores });
     });
   });
 
