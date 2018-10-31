@@ -1,13 +1,14 @@
-<table>
+<table class="table">
   <thead>
-    <th>Rank</th>
-    <th>Email</th>
-    <th>Score</th>
+    <tr>
+      <th>Rank</th>
+      <th>Email</th>
+      <th>Score</th>
+    </tr>
   </thead>
   <tbody>
     {{#each score}}
-    {{id}}
-    {{user.email}}
+    {{> hspartials}}
     {{/each}}
   </tbody>
 </table>
