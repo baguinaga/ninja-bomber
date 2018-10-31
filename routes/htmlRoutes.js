@@ -20,6 +20,19 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/highscores", function(req, res) {
+    db.Scores.findAll({
+      include: [db.user]
+    }).then(function(scores) {
+      res.json(scores);
+      // this will be used to render the handlebars highscore page (just parse and use the json)
+      // res.render("highscores", {
+      //   score: scores.score,
+      //   email: scores.user.email
+      // });
+    });
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
