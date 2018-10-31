@@ -13,6 +13,11 @@ body {
 .navbar{
   background-color: grey;
 }
+
+.navbar-nav {
+  color: white;
+}
+
 .navbar-brand {
   font-family: 'Bangers', cursive;
   font-size: 30px;
@@ -95,5 +100,17 @@ canvas {
 #signup{
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
+  border: .5px solid white;
+}
+
+/* high scores */
+
+.text-center {
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+}
+
+.table{
+  background-color: black;
   border: .5px solid white;
 }
