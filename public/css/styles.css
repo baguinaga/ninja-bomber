@@ -5,6 +5,7 @@ body {
   background-size: cover; 
   height: 100%;
   overflow: hidden;
+  color: white;
 }
 
 /* header.hbs */
@@ -33,6 +34,7 @@ body {
 
 #indexDiv {
   background-color: rgba(0, 0, 0, 0.6);
+  border: .5px solid white;
 }
 
 h1 {
@@ -79,4 +81,19 @@ canvas {
   margin-right: auto;
   display: block;
   width: 800px;
+}
+
+/* sign in */
+
+#signin{
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border: .5px solid white;
+}
+
+/* sign up */
+#signup{
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border: .5px solid white;
 }
