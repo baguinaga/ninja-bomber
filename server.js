@@ -8,6 +8,7 @@ const env = require("dotenv").load();
 const exphbs = require("express-handlebars");
 const router = express.Router();
 const flash = require("connect-flash");
+const PORT = process.env.PORT || 3000;
 
 // BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -69,7 +70,7 @@ models.sequelize
   .then(function() {
     console.log("Database Connected");
 
-    app.listen(3000, function(err) {
+    app.listen(PORT, function(err) {
       if (err) {
         console.log(err);
       } else {
