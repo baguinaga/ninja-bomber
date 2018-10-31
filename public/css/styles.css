@@ -116,3 +116,10 @@ canvas {
   background-color: black;
   border: .5px solid white;
 }
+
+/* logged in page */
+.success {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: .5px solid white;
+  padding: 20px;
+}
