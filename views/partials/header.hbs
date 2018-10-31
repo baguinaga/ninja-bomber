@@ -1,17 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <a class="navbar-brand" href="/">NinjaBomber</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+
+    <div class="navbar-nav w-100">
       <a class="nav-item nav-link" href="/highscores">Leaderboards</a>
       {{#if user}}
       <a class="playgame nav-link ml-auto" href="/game">Play Now!</a>
-      <a class="signout nav-link ml-auto" href="/logout">Sign Out</a>
+      <a class="signout1 nav-link ml-auto" href="/logout">Sign Out</a>
       {{else}}
-      <a class="signin nav-link ml-auto" href="/signin">Sign In</a>
-      <a class="signout nav-link ml-auto" href="/signup">Sign Up</a>
+      <a class="signin nav-link" href="/signin">Sign In</a>
+      <a class="signout nav-link" href="/signup">Sign Up</a>
       {{/if}}
     </div>
   </div>
