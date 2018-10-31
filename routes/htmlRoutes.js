@@ -23,10 +23,13 @@ module.exports = function(app) {
   app.get("/highscores", function(req, res) {
     db.Scores.findAll({
       include: [db.user],
-      order: [["score", "DESC"]],
+      order: [["score", "DESC"]]
     }).then(function(scores) {
       // res.json({score:scores})
       console.log(scores);
+      scores.forEach((score, i) => {
+        score.rank = i + 1;
+      });
       // this will be used to render the  handlebars highscore page (just parse and use the json)
       res.render("highscores", { score: scores });
     });
