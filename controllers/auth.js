@@ -8,7 +8,15 @@ module.exports = (app, passport) => {
   });
 
   app.get("/signin", (req, res) => {
+    console.log(req);
+    console.log(res);
     res.render("signin", { error: req.flash("error") });
+  });
+
+  app.get("/signout", function(req, res) {
+    req.session.destroy(function(err) {
+      res.redirect("/"); //Inside a callback… bulletproof!
+    });
   });
 
   app.post(

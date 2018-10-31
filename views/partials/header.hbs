@@ -6,9 +6,12 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="/highscores">Leaderboards</a>
+      {{#if user}}
+      <a class="signout nav-link ml-auto" href="/signout">Sign Out</a>
+      {{else}}
       <a class="signin nav-link ml-auto" href="/signin">Sign In</a>
-      <a class="signout nav-link ml-auto" href="/signup">Sign Out</a>
       <a class="signout nav-link ml-auto" href="/signup">Sign Up</a>
+      {{/if}}
     </div>
   </div>
 </nav>
