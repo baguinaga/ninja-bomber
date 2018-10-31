@@ -24,10 +24,9 @@ module.exports = function(app) {
     db.Scores.findAll({
       include: [db.user],
       order: [["score", "DESC"]],
+      limit: 10
     }).then(function(scores) {
-      // res.json({score:scores})
       console.log(scores);
-      // this will be used to render the  handlebars highscore page (just parse and use the json)
       res.render("highscores", { score: scores });
     });
   });
