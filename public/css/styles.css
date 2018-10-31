@@ -18,12 +18,16 @@ body {
   float: left;
 }
 
-.description {
+/* float was creating issues in page height
+it's purpose was replaced with bootstrap classes
+will be removed if there is no other use */
+
+/* .description {
   float: right;
   position: relative;
   bottom: 555px;
   margin-right: 60px;
-}
+} */
 
 .arrowKeys {
   height: 150px;
