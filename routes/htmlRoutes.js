@@ -20,13 +20,13 @@ module.exports = function(app) {
     });
   });
 
+  // displays the top 10 highscores
   app.get("/highscores", function(req, res) {
     db.Scores.findAll({
       include: [db.user],
       order: [["score", "DESC"]],
       limit: 10
     }).then(function(scores) {
-      console.log(scores);
       scores.forEach((score, i) => {
         score.rank = i + 1;
       });

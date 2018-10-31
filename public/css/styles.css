@@ -9,13 +9,7 @@ body {
   background-size: cover; 
   height: 100%;
   overflow: hidden;
-  background-color: #ffff80;
-  -webkit-filter: saturate(3);
 }
-
-html {
-  
- }
 
 /* header.hbs */
 
@@ -41,11 +35,6 @@ html {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* body {
-  background-color: rgba(255,255,255,0);
-} */
-
-
 .screenshot {
   width: 500px;
   height: 500px;
@@ -69,17 +58,6 @@ h1 {
   font-family: 'Bangers', cursive;
   font-size: 50px;
 }
-
-/* float was creating issues in page height
-it's purpose was replaced with bootstrap classes
-will be removed if there is no other use */
-
-/* .description {
-  float: right;
-  position: relative;
-  bottom: 555px;
-  margin-right: 60px;
-} */
 
 .arrowKeys {
   height: 150px;
