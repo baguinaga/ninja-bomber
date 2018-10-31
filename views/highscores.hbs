@@ -4,7 +4,10 @@
     <th>Email</th>
     <th>Score</th>
   </thead>
-    <tbody>
-      {{score}}
-    </tbody>
+  <tbody>
+    {{#each score}}
+    {{id}}
+    {{user.email}}
+    {{/each}}
+  </tbody>
 </table>
