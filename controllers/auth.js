@@ -11,6 +11,12 @@ module.exports = (app, passport) => {
     res.render("signin", { error: req.flash("error") });
   });
 
+  app.get("/signout", function(req, res) {
+    req.session.destroy(function(err) {
+      res.redirect("/"); //Inside a callback… bulletproof!
+    });
+  });
+
   app.post(
     "/signup",
     passport.authenticate("local-signup", {
@@ -45,6 +51,10 @@ module.exports = (app, passport) => {
 
   app.get("/game", isLoggedIn, function(req, res) {
     res.render("game");
+  });
+
+  app.get("/api/game/:id", function(req, res) {
+    res.render("highscores");
   });
 
   function isLoggedIn(req, res, next) {

@@ -47,6 +47,11 @@ const models = require("./models");
 // Express static assets
 app.use(express.static("public"));
 
+app.use(function(req, res, next) {
+  res.locals.user = req.user || null;
+  next();
+});
+
 // Routes
 const authRoute = require("./controllers/auth.js")(app, passport);
 //const gameRoute = require("./controllers/gameController.js")(app, passport);

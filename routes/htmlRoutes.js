@@ -27,6 +27,9 @@ module.exports = function(app) {
       limit: 10
     }).then(function(scores) {
       console.log(scores);
+      scores.forEach((score, i) => {
+        score.rank = i + 1;
+      });
       res.render("highscores", { score: scores });
     });
   });
