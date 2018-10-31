@@ -1,4 +1,3 @@
 node_modules
+public
 models
-public/js/game.js
-public/js/highscores.js
