@@ -1,7 +1,3 @@
-.list-group-item {
-  line-height: 2.5;
-}
-
 /* main */
 body {
   font-family: 'Merriweather', serif;
@@ -9,13 +5,7 @@ body {
   background-size: cover; 
   height: 100%;
   overflow: hidden;
-  background-color: #ffff80;
-  -webkit-filter: saturate(3);
 }
-
-html {
-  
- }
 
 /* header.hbs */
 
@@ -39,10 +29,6 @@ html {
   border-right: .5px solid white;
 }
 
-.signout1 {
-  
-}
-
 /* index.hbs */
 
 #indexDiv {
@@ -53,11 +39,6 @@ h1 {
   padding-top: 10px;
   color: white;
 }
-
-/* body {
-  background-color: rgba(255,255,255,0);
-} */
-
 
 .screenshot {
   width: 500px;
@@ -82,17 +63,6 @@ h1 {
   font-family: 'Bangers', cursive;
   font-size: 50px;
 }
-
-/* float was creating issues in page height
-it's purpose was replaced with bootstrap classes
-will be removed if there is no other use */
-
-/* .description {
-  float: right;
-  position: relative;
-  bottom: 555px;
-  margin-right: 60px;
-} */
 
 .arrowKeys {
   height: 150px;
