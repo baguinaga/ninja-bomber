@@ -10,17 +10,19 @@ body {
 
 /* header.hbs */
 
+
 .navbar{
   background-color: grey;
 }
 
 .navbar-nav {
   color: white;
+  
 }
 
 .navbar-brand {
   font-family: 'Bangers', cursive;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 .nav-item {
