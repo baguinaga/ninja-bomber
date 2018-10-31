@@ -27,18 +27,31 @@ html {
   font-size: 30px;
 }
 
+.nav-item {
+  border-right: .5px solid white;
+}
+
+.playgame{
+  border-right: .5px solid white;
+}
+
 .signin {
   border-right: .5px solid white;
 }
 
 .signout1 {
-  border-right: .5px solid white;
+  
 }
 
 /* index.hbs */
 
 #indexDiv {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  padding-top: 10px;
+  color: white;
 }
 
 /* body {
