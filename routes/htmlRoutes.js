@@ -22,14 +22,13 @@ module.exports = function(app) {
 
   app.get("/highscores", function(req, res) {
     db.Scores.findAll({
-      include: [db.user]
+      include: [db.user],
+      order: [["score", "DESC"]],
     }).then(function(scores) {
-      res.json(scores);
-      // this will be used to render the handlebars highscore page (just parse and use the json)
-      // res.render("highscores", {
-      //   score: scores.score,
-      //   email: scores.user.email
-      // });
+      // res.json({score:scores})
+      console.log(scores);
+      // this will be used to render the  handlebars highscore page (just parse and use the json)
+      res.render("highscores", { score: scores });
     });
   });
 
