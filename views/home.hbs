@@ -1,16 +1,12 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md">
-      <br><br><br>
-      <h1><strong>Welcome! </strong> You are logged in.</h1>
-
-      <strong>Name: {{user.firstname}} {{user.lastname}}</strong> | <strong>Email: {{user.email}}</strong>
-
-      <br><br><br>
-
-      <a class="btn btn-primary" href="/game" role="button">Begin New Game</a>
-
-      <a class="btn btn-primary" href="/logout" role="button">Sign Out</a>
+  <div class="row justify-content-center">
+    <div class="col-6 logInForms mt-5">
+      
+      <h1>Welcome!</h1>
+      <h4 class="mt-2">Name: {{user.firstname}} {{user.lastname}} </h4>
+      <h4>Email: {{user.email}}</h4>
+      <br>
+      <a class="btn btn-danger btn-lg text-center" href="/game" role="button">PLAY!</a>
     </div>
   </div>
 </div>

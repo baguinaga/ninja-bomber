@@ -10,14 +10,8 @@ body {
 
 /* header.hbs */
 
-
-.navbar{
-  background-color: grey;
-}
-
 .navbar-nav {
   color: white;
-  
 }
 
 .navbar-brand {
@@ -26,22 +20,22 @@ body {
 }
 
 .nav-item {
-  border-right: .5px solid white;
+  border-right: .5px solid #9A9DA0;
 }
 
 .playgame{
-  border-right: .5px solid white;
+  border-right: .5px solid #9A9DA0;
 }
 
 .signin {
-  border-right: .5px solid white;
+  border-right: .5px solid #9A9DA0;
 }
 
 /* index.hbs */
 
-#indexDiv {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: .5px solid white;
+.black-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px solid white;
 }
 
 h1 {
@@ -54,10 +48,10 @@ h1 {
   height: 500px;
 }
 
+
 h2 {
   font-family: 'Bangers', cursive;
   font-size: 32px;
-  padding-top: 70px;
 }
 
 h4 {
@@ -91,28 +85,27 @@ canvas {
 }
 
 /* sign in */
+/* sign up */
 
-#signin{
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border: .5px solid white;
+.error{
+  margin-bottom: 10px;
+  color: #E50000;
+  text-shadow: 0.5px 0.5px 5px black;
 }
 
-/* sign up */
-#signup{
-  background-color: rgba(0, 0, 0, 0.6);
+.logInForms{
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border: .5px solid white;
 }
 
 /* high scores */
 
-.text-center {
-  font-family: 'Bangers', cursive;
-  font-size: 30px;
+.table{
+  border: 1.5px solid white;
 }
 
-.table{
-  background-color: black;
-  border: .5px solid white;
+#tableTitle {
+  font-family: 'Bangers', cursive;
+  font-size: 40px;
 }
