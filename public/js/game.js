@@ -139,10 +139,9 @@ function create() {
   this.physics.add.collider(player, bombs, hitBomb, null, this);
 }
 
-function restart() {
-  $(window).on("click", function() {
-    window.location.reload(true);
-  });
+function showModal() {
+  $("#scoreModal").text(score);
+  $("#gameOver").modal("show");
 }
 
 function update() {
@@ -159,7 +158,7 @@ function update() {
         data: userData
       }).then(response => {
         console.log(response);
-        return restart();
+        return showModal();
       });
     }
   }
