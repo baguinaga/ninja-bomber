@@ -1,30 +1,33 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md">
-            <form id="signup" name="signup" method="post" action="/signup">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="firstname" class="form-control" placeholder="First Name">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname" class="form-control" placeholder="Last Name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <div class="row justify-content-center">
+        <div class="col-6 logInForms mt-5">
+            <form name="signup" method="post" action="/signup">
+                <div class="form-row">
+                    <div class="col-12 form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="col-6 form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="firstname" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col-6 form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname" class="form-control" placeholder="Last Name">
+                    </div>
+                    <div class="col-12 form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Password">
+                    </div>
                 </div>
                 {{#if error}}
                 <div class="error">
-                    <span style="color: red">{{error}}</span>
+                    <span style="color: #B10000">{{error}}</span>
                 </div>
                 {{/if}}
-                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="submit" class="btn btn-danger btn-lg text-center">Sign Up</button>
             </form>
         </div>
     </div>

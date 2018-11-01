@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md">
-      <form id="signin" name="signin" method="post" action="signin">
+  <div class="row justify-content-center">
+    <div class="col-6 logInForms mt-5">
+      <form name="signin" method="post" action="signin">
         <h3>Please log in</h3>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
@@ -14,10 +14,10 @@
         </div>
         {{#if error}}
         <div class="error">
-          <span style="color: red">{{error}}</span>
+          <span>{{error}}</span>
         </div>
         {{/if}}
-        <button type="submit" class="btn btn-primary">Sign In</button>
+        <button type="submit" class="btn btn-danger btn-lg text-center">Sign In</button>
       </form>
     </div>
 
